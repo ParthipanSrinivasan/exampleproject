@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td class="col">S.NO</td>
+                        <td class="col">ID</td>
+                        <td class="col">NAME</td>
+                        <td class="col">USERNAME</td>
+                        <td class="col">EMAIL</td>
+                        <td class="col">PHONE</td>
+                        <td class="col">WEBSITE</td>
+                        <td class="col">Edit</td>
+                        <td class="col">SAVE</td>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let value of student_details;let i=index">
+                    <tr>
+                        <td>{{i+1}}</td>
+                         <td>{{value.id}}</td>
+                         <td>{{value.name}}</td>
+                         <td>{{value.username}}</td>
+                         <td>{{value.email}}</td>
+                         <td>{{value.phone}}</td>
+                         <td>{{value.website}}</td>
+                         <td><button class="btn btn-danger" (click)="openDialog(value)"><i class="bi bi-trash"></i></button></td>
+                         <td><button class="btn btn-primar" ></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

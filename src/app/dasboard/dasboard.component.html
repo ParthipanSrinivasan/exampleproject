@@ -1,0 +1,16 @@
+<div class="container"> 
+    <div class="row">
+        <div class="col-10">
+            <div class="d-flex justify-content-center bg-info">
+              <h3>Login Page</h3>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="justify-content-end">
+              <button type="button" (click)="logOut()" class="btn btn-danger" [routerLink]="['/login']">LogOut</button>
+            </div>
+          </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+

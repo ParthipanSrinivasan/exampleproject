@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="d-flex justify-content-center">
+        <form [formGroup]="loginName" (ngSubmit)=" userInput()">
+          <div class="form-group mt-5">
+            <label for="">Phone Number</label>
+            <input
+              type="text"
+              class="form-control mb-3"
+              placeholder="phone-number"
+              formControlName="phone"
+            />
+            <h5 *ngIf="this.loginName.controls['phone'].hasError('minLength')" class="danger">Please enter phone number</h5>
+            <label for="">Password</label>
+            <input
+              type="text"
+              class="form-control mb-3"
+              placeholder="password"
+              formControlName="pass"
+            />
+            <div class="row">
+              <div class="col-12">
+               <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary ">Submit</button>
+               </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
